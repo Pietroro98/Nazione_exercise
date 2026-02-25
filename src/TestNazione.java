@@ -36,10 +36,46 @@ public class TestNazione {
         Nazione giappone = new Nazione("Giappone", 377975, 30000000);
         Nazione australia = new Nazione("Australia", 7692024, 20000000);
         Nazione messico = new Nazione("Messico", 1964375, 10000000);
-        Nazione[] nazioni2 = { canada, giappone, australia, messico };
+        Nazione[] nazioni2 = { canada, giappone, messico };
 
         System.out.println("Atteso un numero > 0 se esiste una nazione piu popolosa di tutte le altre, altrimenti 0");
         System.out.println(australia.dimmiQuanteSonoPiuPopolose(nazioni2));
+        System.out.println("*** Test End ***");
+
+
+        System.out.println("\n *** Test sul controllo se la nazione ha più abitanti di tutte le altre ***");
+        Nazione brasile = new Nazione("Brasile", 8515767, 203000000);
+        Nazione egitto = new Nazione("Egitto", 1002450, 11200);
+        Nazione argentina = new Nazione("Argentina", 2780400, 46000000);
+        Nazione[] nazioni3 = { brasile, argentina };
+        System.out.println("Atteso true se questa nazione è la più popolosa, altrimenti false");
+        System.out.println(egitto.haPiuAbitantiDiTutteLeAltre(nazioni3));
+        System.out.println("*** Test End ***");
+
+
+
+        System.out.println("\n *** Test se tutte le nazioni hanno la stessa iniziale ***");
+        Nazione italia2 = new Nazione("Italia", 301338, 60461826);
+        Nazione irlanda = new Nazione("Irlanda", 70273, 5300000);
+        Nazione islanda = new Nazione("Islanda", 103000, 380000);
+        Nazione[] nazioni4 = { irlanda, islanda };
+
+        System.out.println("Atteso true se tutte iniziano con la stessa lettera, altrimenti false");
+        System.out.println(italia2.hannoTutteLaMiaStessaIniziale(nazioni4));
+        System.out.println("*** Test End ***");
+
+
+
+
+        System.out.println("\n *** Test se la superficie è sopra la media ***");
+        Nazione cina = new Nazione("Cina", 9596961, 1410000000);
+        Nazione belgio = new Nazione("Belgio", 30528, 11700000);
+        Nazione olanda = new Nazione("Olanda", 41850, 17500000);
+        Nazione grecia = new Nazione("Grecia", 131957, 10400000);
+        Nazione[] nazioni5 = { belgio, olanda, grecia };
+
+        System.out.println("Atteso true se cina ha superficie sopra la media, altrimenti false");
+        System.out.println(cina.eAlDiSopraDellaMediaComeSuperficie(nazioni5));
         System.out.println("*** Test End ***");
     }
 }

@@ -100,4 +100,62 @@ public class Nazione {
         }
         return contatore;
     }
+
+
+    /**
+     * Verifica se la nazione corrente ha più abitanti di tutte le altre.
+     * @param nazioni Array di nazioni da confrontare
+     * @return true se la nazione corrente ha più abitanti di tutte le altre, altrimenti false.
+     */
+    public boolean haPiuAbitantiDiTutteLeAltre(Nazione[] nazioni){
+        if(nazioni == null) {
+            return false;
+        }
+        for(int i = 0; i < nazioni.length; i++) {
+            if(nazioni[i].numeroAbitanti >= this.numeroAbitanti) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+
+    /**
+     * Verifica se tutte le nazioni hanno la stessa iniziale.
+     * @param nazioni Array di nazioni da confrontare
+     * @return true se tutte le nazioni hanno la stessa iniziale, altrimenti false.
+     */
+    public boolean hannoTutteLaMiaStessaIniziale(Nazione[] nazioni){
+        if(nazioni == null) {
+            return false;
+        }
+        for(int i = 0; i < nazioni.length; i++) {
+            if(nazioni[i].denominazione.charAt(0) != this.denominazione.charAt(0)) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    /**
+     * Verifica se la superficie della nazione corrente è al di sopra della media delle superfici delle nazioni passate.
+     * @param nazioni Array di nazioni da confrontare
+     * @return true se la superficie è al di sopra della media, altrimenti false.
+     */
+    public boolean eAlDiSopraDellaMediaComeSuperficie(Nazione[] nazioni){
+        if(nazioni == null) {
+            return false;
+        }
+        double somma = 0;
+        int contatore = 0;
+        for(int i = 0; i < nazioni.length; i++) {
+            if(nazioni[i] != null) {
+                somma += nazioni[i].superficieKmQ;
+                contatore++;
+            }
+            if(contatore == 0) return false;
+
+        }
+        return somma / contatore > this.superficieKmQ;
+    }
 }
