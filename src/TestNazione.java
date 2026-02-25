@@ -28,6 +28,18 @@ public class TestNazione {
 
         Nazione[] nazioni = { portogallo, svizzera, norvegia, svezia };
         System.out.println("Atteso true se esiste una nazione piu estesa di tutte le altre, altrimenti false");
-        System.out.println(italia.esisteAlmenoUnaPiuEstesa(nazioni));
+        System.out.println(svizzera.esisteAlmenoUnaPiuEstesa(nazioni));
+
+
+        System.out.println("\n *** Test sul conteggio di quante nazioni sono piu popolose di un altra ***");
+        Nazione canada = new Nazione("Canada", 9984670, 40000000);
+        Nazione giappone = new Nazione("Giappone", 377975, 30000000);
+        Nazione australia = new Nazione("Australia", 7692024, 20000000);
+        Nazione messico = new Nazione("Messico", 1964375, 10000000);
+        Nazione[] nazioni2 = { canada, giappone, australia, messico };
+
+        System.out.println("Atteso un numero > 0 se esiste una nazione piu popolosa di tutte le altre, altrimenti 0");
+        System.out.println(australia.dimmiQuanteSonoPiuPopolose(nazioni2));
+        System.out.println("*** Test End ***");
     }
 }

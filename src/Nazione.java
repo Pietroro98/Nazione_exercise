@@ -84,4 +84,20 @@ public class Nazione {
         }
         return false;
     }
+
+
+    /**
+     * Conta quante nazioni sono più popolose rispetto alla nazione corrente.
+     * @param nazioni Array di nazioni da confrontare
+     * @return numero > 0, altrimenti 0 se non ne esiste nessuna.
+     */
+    public int dimmiQuanteSonoPiuPopolose(Nazione[] nazioni){
+        int contatore = 0;
+        for(int i =0; i < nazioni.length; i++) {
+            if(nazioni[i].numeroAbitanti > this.numeroAbitanti) {
+                contatore++;
+            }
+        }
+        return contatore;
+    }
 }
