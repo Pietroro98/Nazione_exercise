@@ -42,4 +42,17 @@ public class Nazione {
                 '}';
     }
 
+    /**
+     * Verifica se la nazione corrente è più estesa di quella fornita come parametro.
+     * @param input Nazione da confrontare
+     * @return true se la nazione corrente è più estesa, altrimenti false.
+     */
+    public boolean piuEstesaDi(Nazione input) {
+        if (input == null) {
+            return false;
+        }
+        return this.superficieKmQ > input.superficieKmQ;
+    }
+
+
 }
