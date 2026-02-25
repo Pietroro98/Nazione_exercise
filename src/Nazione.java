@@ -55,4 +55,15 @@ public class Nazione {
     }
 
 
+    /**
+     * Verifica se la nazione corrente è più popolosa di quella fornita come parametro.
+     * @param input Nazione da confrontare
+     * @return true se la nazione corrente è più popolosa, altrimenti false.
+     */
+    public boolean piuPopolosaDi(Nazione input){
+        if (input == null) {
+            return false;
+        }
+        return this.numeroAbitanti > input.numeroAbitanti;
+    }
 }
