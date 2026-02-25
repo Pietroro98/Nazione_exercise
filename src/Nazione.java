@@ -66,4 +66,22 @@ public class Nazione {
         }
         return this.numeroAbitanti > input.numeroAbitanti;
     }
+
+
+    /**
+     * Verifica se esiste almeno una nazione più estesa rispetto alla nazione corrente.
+     * @param nazioni Array di nazioni da confrontare
+     * @return true se esiste almeno una nazione più estesa, altrimenti false.
+     */
+    public boolean esisteAlmenoUnaPiuEstesa(Nazione[] nazioni){
+        if(nazioni == null) {
+            return false;
+        }
+        for(int i = 0; i < nazioni.length; i++) {
+            if(nazioni[i].superficieKmQ > this.superficieKmQ) {
+                return true;
+            }
+        }
+        return false;
+    }
 }
