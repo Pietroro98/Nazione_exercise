@@ -1,3 +1,5 @@
+package it.esercizio.nazione;
+
 public class TestNazione {
     public static void main(String[] args) {
         System.out.println( "\n *** Test se una nazione è più estesa di un'altra ***");

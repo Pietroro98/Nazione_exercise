@@ -1,3 +1,5 @@
+package it.esercizio.nazione;
+
 public class Nazione {
     private String denominazione;
     private double superficieKmQ;
@@ -35,7 +37,7 @@ public class Nazione {
 
     @Override
     public String toString() {
-        return "Nazione{" +
+        return "it.esercizio.nazione.Nazione{" +
                 "denominazione='" + denominazione + '\'' +
                 ", superficieKmQ=" + superficieKmQ +
                 ", numeroAbitanti=" + numeroAbitanti +
@@ -44,7 +46,7 @@ public class Nazione {
 
     /**
      * Verifica se la nazione corrente è più estesa di quella fornita come parametro.
-     * @param input Nazione da confrontare
+     * @param input it.esercizio.nazione.Nazione da confrontare
      * @return true se la nazione corrente è più estesa, altrimenti false.
      */
     public boolean piuEstesaDi(Nazione input) {
@@ -57,7 +59,7 @@ public class Nazione {
 
     /**
      * Verifica se la nazione corrente è più popolosa di quella fornita come parametro.
-     * @param input Nazione da confrontare
+     * @param input it.esercizio.nazione.Nazione da confrontare
      * @return true se la nazione corrente è più popolosa, altrimenti false.
      */
     public boolean piuPopolosaDi(Nazione input){
